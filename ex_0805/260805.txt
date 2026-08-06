@@ -1,0 +1,35 @@
+정용훈 j6y5h7@naver.com
+
+공유 폴더 : naver.me/GSQFQoY4
+		naver.me/G58IptwG
+
+https://cursor.com/
+
+자바 (1개월)
+미니 프로젝트(1주)?
+웹표준(2주)
+DB(2주)
+리엑트(1주)----aws?
+1차 프로젝트(1개월) 
+jsp(1개월)
+스프링(2주)
+스프링부트(1주) -aws?
+파이널 프로젝트(2개월~)
+
+최 상단에 TextField,
+TextField 아래에 TextArea를 만들고
+TextField에 값을 입력하고 확인버튼을 누르면
+TextArea에 값이 누적돼서 입력되는
+간단한 메모 앱을 만들어보자
+자바 Frame을 사용할거고,  main frame의 bounds는 
+300, 500, 300, 500으로 지정하자
+
+커서에서 class 파일 만들떄는 .java 붙이자, 첫글자는 대문자
+vs code>sticky>enabled 해제
+
+자바에서 변수를 만들때
+1.카멜표기법
+2.파스칼 표기법
+3.헝가리안 표기법
+4.스네이크 표기법
+에 대해서 설명하는 주석을 작성해줘

@@ -1,0 +1,29 @@
+package ex4_operator;
+
+public class Ex4_oper {
+
+    public static void main(String[] args) {
+
+        //증감연산자
+        //1씩 증가시키거나 1씩 감소시키는 연산자
+        //선행증감과 후행증감의 차이를 알고있어야 한다.
+        int a = 10;
+        System.out.println("a : " + ++a); // 선행증가
+
+        int b = 10;
+        System.out.println("b : " + b++); // 후행증가
+        System.out.println("b : " + b);
+
+        b++; //11
+        ++b; //13
+        --b; //12
+        b--; //12
+        --b; //10
+        b++; //10
+        --b; //10
+        b++; //10
+        System.out.println(++b); //12?
+        
+    }
+
+}
