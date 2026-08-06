@@ -11,4 +11,4 @@ git remote set-url origin https://github.com/pomending/study_java.git
 git push -u origin master --force
 다시 할 때는 2,3,6번
 
-이 코드 주석좀 달아줘 > 범위 긁고 shift + K
+이 코드 주석좀 달아줘 > 범위 긁고 ctrl + K
