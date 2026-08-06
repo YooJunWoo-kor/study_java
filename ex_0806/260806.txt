@@ -1,0 +1,11 @@
+자동 줄 정렬 : alt+ shift + F (들여쓰기 알아서 해줌)
+
+git config --global user.name "pomending"
+git config --global user.email " pomending@gmail.com"
+
+git init
+git add ./폴더명
+git commit -m "메시지"
+git remote add origin https://github.com/pomending/study_java.git
+git remote set-url origin https://github.com/pomending/study_java.git
+git push -u origin master --force
