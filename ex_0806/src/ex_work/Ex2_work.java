@@ -21,8 +21,8 @@ public class Ex2_work {
         int eng = 40;
         int math = 60;
         int sci = 50;
-        float average = (kor + eng + math + sci) / 4f;
         int total = kor + eng + math + sci;
+        float average = total / 4f;
         int count50 = 0;
 
         String res = "";

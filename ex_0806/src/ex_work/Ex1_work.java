@@ -47,7 +47,7 @@ public class Ex1_work {
         System.out.println(test);
 
         /*
-         * int count70;
+         * int count70 = 0;
          * 
          * if( kor >= 70 ) count70++;
          * if( eng >= 70 ) count70++;
