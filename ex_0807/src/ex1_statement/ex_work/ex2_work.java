@@ -21,7 +21,7 @@ public class ex2_work {
         if(dan >=2 && dan <= 9){
             for(int i = 1; i <= 9; i++){
                 // System.out.println(dan + " * " + i + " = " + dan*i);
-                System.out.printf("%d * %d = %d \n", dan, i, (dan*i)); // printf로 출력
+                System.out.printf("%d * %d = %02d \n", dan, i, (dan*i)); // printf로 출력
             }
         }
         else

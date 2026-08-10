@@ -1,7 +1,8 @@
 정용훈 j6y5h7@naver.com
 
-공유 폴더 : naver.me/GSQFQoY4
+공유 폴더 : 	naver.me/GSQFQoY4
 		naver.me/G58IptwG
+		window + R -> \\192.168.0.46 (교실에서만)
 
 https://cursor.com/
 

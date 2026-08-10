@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 public class ex3_for {
     public static void main(String[] args) {
+        // Scanner 변수 = new Scanner(System.in)
+        // 출력될 문장
+        //int 변수 = 변수.nextInt();
+
          Scanner sc = new Scanner(System.in);
          System.out.print("원금 : ");
          int money = sc.nextInt();
