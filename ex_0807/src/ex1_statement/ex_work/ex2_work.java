@@ -19,12 +19,13 @@ public class ex2_work {
         int dan = sc.nextInt();
 
         if(dan >=2 && dan <= 9){
-            for(int i=1;i <= 9; i++){
-                System.out.println(dan + " * " + i + " = " + dan*i);
+            for(int i = 1; i <= 9; i++){
+                // System.out.println(dan + " * " + i + " = " + dan*i);
+                System.out.printf("%d * %d = %d \n", dan, i, (dan*i)); // printf로 출력
             }
         }
-        else{
+        else
             System.out.println("2 ~ 9사이의 값을 입력하세요");
-        }
+        
     }
 }
