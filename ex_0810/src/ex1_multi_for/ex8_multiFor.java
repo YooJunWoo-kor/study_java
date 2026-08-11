@@ -11,17 +11,16 @@ public class ex8_multiFor {
          */
 
         for(int i = 1; i <= 10; i++){
-            int count = 0;
 
-            for(int j = i; j <= 10; ){
+            for(int j = 0; j < 10; j++){
 
-                System.out.print(j + " ");
-                
-                if(j++ == 10)
-                    j = 1;
-                
-                if(count++ == 10)
-                    j = 11;
+                int num = i + j;
+
+                if(num > 10)
+                    num -= 10;
+
+                System.out.print(num + " ");
+
 
             }
             System.out.println();

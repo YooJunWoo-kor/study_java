@@ -11,23 +11,20 @@ public class ex9_multiFor {
         주의) for문 2개만 사용
 
          */
-        
+        int layer = 5;
 
-        for(int i = 1; i <= 5; i++){
-            int count = 2*i - 1;
+        for(int i = 1; i <= layer; i++){
+            for(int j = 1; j <= 2*layer - 1; j++){
 
-            for(int k = 0; k < 9 - count; k++){
-                System.out.print(" ");
+                if(j >= layer - i + 1 && j <= layer + i - 1)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
             }
-
-            for(int j = 0; j < count; j++){
-                System.out.print("* ");
-            }
-
             System.out.println();
         }
-    }
 
     }
+}
     
 
