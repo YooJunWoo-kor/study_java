@@ -10,6 +10,9 @@ public class ex1_continue {
             for( int j = 1; j <= 5; j++){
 
                 if( j % 2 == 0 ){
+                    // for문안에서 continue를 만나면
+                    // 가까운 for문의 증감식으로 넘어간다.
+                    // for문에 증감식이 없다면 조건식으로 간다.
                     continue;
                 }
 
