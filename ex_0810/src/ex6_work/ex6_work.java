@@ -14,19 +14,18 @@ public class ex6_work {
         System.out.print("입력 : ");
 
         int cnt = sc.nextInt();
-        int sum = 0; 
-        int num1 = 1;
-        int num2 = 1;
+        int prev = 0; 
+        int curr = 1;
+        int next = 0;
 
-        for(int i = 1; i <= cnt; i++){
+        for(int i = 0; i < cnt; i++){
 
-            System.out.printf("%d %d ",num1, num2);
-
-            sum = num1 + num2;
-            num1 = num2;
-            num2 = sum;
-
+            System.out.printf("%d ", curr);
             
+            next = prev + curr;
+            prev = curr;
+            curr = next;
+
         }
 
     } // main

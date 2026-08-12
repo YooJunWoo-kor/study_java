@@ -15,30 +15,51 @@ public class ex5_work {
         int num1 = sc.nextInt();
         System.out.print("수2 : ");
         int num2 = sc.nextInt();
-        int min = 0;
-        int max = 0;
-
-
-        if(num1 > num2){
-            max = num1;
-            min = num2;
-        }
-        else{
-            max = num2;
-            min = num1;
-            
-        }
-
-        outer : for(int i = 1; i <= max; i++){
-            int res = max * i;
-            for(int j = 1; j <= max; j++){
-                if(min * j == res){
-                    System.out.print("최소공배수 : " + res);
-                    break outer;
-                }
+        
+        for(int i = 1; i<= num1 * num2; i++){
+            if(i % num1 == 0 && i % num2 == 0){
+                System.out.println("최소공배수 : " + i);
+                break;
             }
         }
+        
+        System.out.println("------------------------------");
+
+        //최소공배수 (유클리드 호재법)
+        int x = num1;
+        int y = num2;
+
+        while( y != 0 ){
+            int tmp = x % y;
+            x = y;
+            y = tmp;
+        }
+
+        int gcd = x;
+
+        //최소공배수 = 두 숫자를 곱한값에 최대공약수로 나눈값
+        int lcm = (num1 * num2) / gcd ; 
+        System.out.println("최소공배수 : "  + lcm);
+
+
+        /*
+         내 답
+        if(num1 > num2){
+            int tmp = num1;
+            num1 = num2;
+            num2 = tmp;
+        }
+
+        for(int i = 1; i <= num1; i++){
+            int res = num2 * i;
+            if(res % num1 == 0){
+                System.out.println("최소공배수 : " + res);
+                break;
+            }
+        */
+            
         
         
     }
 }
+

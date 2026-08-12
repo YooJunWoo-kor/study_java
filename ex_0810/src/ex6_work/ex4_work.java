@@ -13,32 +13,45 @@ public class ex4_work {
         최대공약수 4
     
         최대공약수 : 2
+        */
 
-         */
+         
         Scanner sc = new Scanner(System.in);
         System.out.print("수1 : ");
         int num1 = sc.nextInt();
         System.out.print("수2 : ");
         int num2 = sc.nextInt();
-        int answer = 0;
-        
-        int min = 0;
 
+        /* 
         // 작은수를 min에 저장
-        if(num1 > num2)
-            min = num2;
-        else
-            min = num1;
+        if(num1 > num2){
+            int tmp = num1;
+            num1 = num2;
+            num2 = tmp;
+        }
 
-        for(int i = 1; i <= min; i++){ // 작은수까지 i를 반복했을 때 두 수가 모두 나누어떨어진다면 공약수, 계속 반복해서 최대값 저장
+        int i = num1;
+
+        for(; i >= 1; i--){ // 작은수까지 i를 반복했을 때 두 수가 모두 나누어떨어진다면 공약수, 계속 반복해서 최대값 저장
             if(num1 % i == 0 && num2 % i == 0){
-                answer = i;
+                break;
             }
         }
 
-        System.out.println("최대공약수 : " + answer);
+        System.out.println("최대공약수 : " + i);
+        */
         
+        // 유클리드 호재법
+
         
+        while( num2 != 0){
+            int tmp = num1 % num2;
+            num1 = num2;
+            num2 = tmp;
+        }
+
+        System.out.println("최대공약수 : " + num1);
+
         
 
     } // main
