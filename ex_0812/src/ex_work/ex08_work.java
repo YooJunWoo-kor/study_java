@@ -25,8 +25,8 @@ public class ex08_work {
 
         for(int i = 0; i < coin.length; i++){
             int count = (money / coin[i]);
-            System.out.printf("%d원 : %d\n", coin[i], (count) );
-            money -= coin[i] * (count);
+            System.out.printf("%d원 : %d\n", coin[i], count );
+            money -= coin[i] * count;
         }
         
 

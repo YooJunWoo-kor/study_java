@@ -14,7 +14,7 @@ public class ex09_work {
         outer : for(int i = 0; i < lotto.length; i++){
             lotto[i] = new Random().nextInt(45) + 1;
             for(int j = 0; j < lotto.length; j++){
-                if(lotto[i] == lotto[j] && i != j){
+                if(lotto[i] == lotto[j] && i != j){ // 비교할때 i와 j가 항상 같아지는 상황이 생기기 때문에 i != j를 넣어서 무한루프 방지
                     i--;
                     continue outer;
                 }
