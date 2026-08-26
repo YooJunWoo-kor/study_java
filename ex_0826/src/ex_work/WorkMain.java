@@ -22,14 +22,16 @@ public class WorkMain {
         //50 + 15 = 65
         // 정답입니다
         // 결과 : 24초
+
         Scanner sc = new Scanner(System.in);
 
         CountSec t = new CountSec();
         Quiz q = new Quiz();
+        final int FINISH = 3; //변하지 않는 상수는 대문자로
 
         try{
-            t.start();
-            while(Quiz.answerC != 5){
+            t.start(); // 타이머 시작
+            while( Quiz.answerC != FINISH ){
                 int num1 = new Random().nextInt(100) + 1;
                 int num2 = new Random().nextInt(100) + 1;
                 System.out.printf("%d + %d = ", num1, num2);
@@ -39,12 +41,13 @@ public class WorkMain {
             }
 
             System.out.println("결과 : " + t.getCount() + "초 걸렸습니다");
+            t.stopCount();
 
         }catch(InputMismatchException e){
             System.out.println("정수를 입력하세요");
             t.stopCount();
-            return;
         }
+        
 
         
 
