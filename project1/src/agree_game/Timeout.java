@@ -1,12 +1,14 @@
 package src.agree_game;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Restart extends Frame {
+public class Timeout extends Frame {
 
-    public Restart(JButton[] buttonlist, JButtonFunction jbf) {
-        setBounds(650, 250, 400, 220);
+    public Timeout() {
+        setBounds(600, 250, 500, 300);
         setUndecorated(true);
         setLayout(null);
 
@@ -20,21 +22,20 @@ public class Restart extends Frame {
                 super.paint(g);
             }
         };
-        background.setBounds(0, 0, 400, 220);
+        background.setBounds(0, 0, 500, 300);
         background.setLayout(null);
         add(background);
 
-        Font font = new Font("굴림", Font.PLAIN, 18);
         Panel titleBar = new Panel();
         titleBar.setBackground(new Color(40, 100, 220));
-        titleBar.setBounds(0, 0, 400, 45);
+        titleBar.setBounds(0, 0, 500, 45);
         titleBar.setLayout(null);
         background.add(titleBar);
 
-        Label title = new Label("다시 하시겠습니까?", Label.CENTER);
+        Label title = new Label("주의", Label.CENTER);
         title.setForeground(Color.WHITE);
-        title.setFont(font);
-        title.setBounds(0, 5, 400, 35);
+        title.setFont(new Font("맑은 고딕", Font.BOLD, 18));
+        title.setBounds(0, 5, 500, 35);
         titleBar.add(title);
 
         ImageIcon close_img = new ImageIcon("src/images/닫기버튼.png");
@@ -42,43 +43,40 @@ public class Restart extends Frame {
         closeButton.setContentAreaFilled(false);
         closeButton.setBorderPainted(false);
         closeButton.setFocusPainted(false);
-        closeButton.setBounds(400 - 40, 5, 35, 35);
+        closeButton.setBounds(500 - 40, 5, 35, 35);
         closeButton.addActionListener(e -> dispose());
         titleBar.add(closeButton);
 
-        Label label = new Label("게임을 다시 하시겠습니까?", Label.CENTER);
-        label.setBounds(50, 85, 300, 40);
-        label.setFont(font);
+        Font font = new Font("굴림", Font.PLAIN, 18);
 
-        Button restart = new Button("재시작");
-        restart.setBounds(60, 150, 120, 45);
-        restart.setFont(new Font("맑은 고딕", Font.BOLD, 16));
+        Label label1 = new Label("시간이 경과했습니다 !!", Label.CENTER);
+        label1.setBounds(60, 90, 380, 30);
+        label1.setFont(font);
 
-        Button exit = new Button("종료");
-        exit.setBounds(220, 150, 120, 45);
-        exit.setFont(new Font("맑은 고딕", Font.BOLD, 16));
+        Label label2 = new Label("시간안에 이용약관에 동의해야합니다", Label.CENTER);
+        label2.setBounds(60, 122, 380, 30);
+        label2.setFont(font);
 
-        restart.addActionListener(new ActionListener() {
+        Button btn = new Button("타이틀로 돌아가기");
+        btn.setBounds(150, 200, 180, 50);
+        btn.setFont(font);
+
+        btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                jbf.appear(buttonlist);
-                dispose();
+                if (e.getActionCommand().equals(btn.getLabel()))
+                    System.exit(0);
             }
         });
 
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
-
-        background.add(label);
-        background.add(restart);
-        background.add(exit);
+        background.add(btn);
+        background.add(label1);
+        background.add(label2);
 
         setVisible(true);
+
         addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 dispose();
             }

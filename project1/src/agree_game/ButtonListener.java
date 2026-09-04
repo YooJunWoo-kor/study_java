@@ -36,12 +36,10 @@ public class ButtonListener implements ActionListener{
 
                 int[] xb = xa.clone();
                 int[] yb = ya.clone();
-
                 shuffle(xb, yb);
 
                 int[] xc = xb.clone();
                 int[] yc = yb.clone();
-                
                 shuffle(xc, yc);
 
                 for (int i = 0; i < buttonlist.length; i++) {
@@ -54,16 +52,14 @@ public class ButtonListener implements ActionListener{
                 new Disagree();
                 break;
 
-            case "???":                
+            case "???":              
                 JButton clicked = (JButton) e.getSource();
                 jbf.appear(buttonlist);   
                 if (clicked.getText().equals("동의한다")) {
-                    new Restart(buttonlist, jbf);
                     new Success();       
                 }
-                else {
-                    new Restart(buttonlist, jbf);
-                    new Disagree();       
+                else {  
+                    new Disagree();  
                 }
 
                 break;

@@ -59,7 +59,7 @@ public class Success extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getActionCommand().equals(btn.getLabel()))
-                    dispose();
+                    System.exit(0);
             }
         });
 

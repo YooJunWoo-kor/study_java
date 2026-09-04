@@ -49,7 +49,7 @@ public class Move extends Thread {
             }
 
             try {
-                sleep(3);
+                sleep(4);
             } catch (Exception e) {
             }
             button.setLocation(cur_x, cur_y);

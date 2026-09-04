@@ -13,11 +13,9 @@ public class JButtonFunction {
     Color[] color;
     Random rd = new Random();
     Frame f;
-    Move move[] = null; 
-    private int count;
+    Move move[] = null;
     private ImageIcon agree_Img;
     private ImageIcon disagree_Img;
-    private boolean ismoving = false;
 
     ImageIcon questionbtn = new ImageIcon("src/images/물음표버튼.png");
 

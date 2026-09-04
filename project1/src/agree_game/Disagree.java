@@ -44,7 +44,12 @@ public class Disagree extends Frame {
         closeButton.setBorderPainted(false);
         closeButton.setFocusPainted(false);
         closeButton.setBounds(500 - 40, 5, 35, 35);
-        closeButton.addActionListener(e -> dispose());
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
         titleBar.add(closeButton);
 
         Font font = new Font("굴림", Font.PLAIN, 18);
@@ -65,7 +70,7 @@ public class Disagree extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getActionCommand().equals(btn.getLabel()))
-                    dispose();
+                    System.exit(0);
             }
         });
 

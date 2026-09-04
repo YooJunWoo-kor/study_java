@@ -26,6 +26,20 @@ public class GameMain {
         closeButton.setBounds(660, 5, 35, 35);
         closeButton.addActionListener(e -> System.exit(0));
         f.add(closeButton);
+        
+        Font font = new Font("굴림", Font.PLAIN, 18);
+
+        Label time = new Label("50");
+        time.setBounds(10,5,35,35);
+        time.setFont(font);
+        time.setBackground(new Color(40, 100, 220));
+        time.setForeground(Color.WHITE);
+        
+        f.add(time);
+
+        Timer timer = new Timer(time);
+        timer.start();
+        
 
         //여기부터
         Panel background = new Panel() {
@@ -51,7 +65,6 @@ public class GameMain {
 
         Label title = new Label("이용약관에 동의하십니까?");
         title.setForeground(Color.WHITE);
-        Font font = new Font("굴림", Font.PLAIN, 18);
         title.setFont(font);
         title.setAlignment(Label.CENTER);
         title.setBounds(0, 5, 700, 35);
