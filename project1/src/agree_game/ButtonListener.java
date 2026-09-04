@@ -8,16 +8,11 @@ public class ButtonListener implements ActionListener{
     private JButton[] buttonlist;
     private Frame f;
     private JButtonFunction jbf;
-    private ImageIcon agree_Image;
-    private ImageIcon disagree_Image;
-    
 
     public ButtonListener(Frame f, JButton[] buttonlist, ImageIcon agree_Img, ImageIcon disagree_Img){
         this.buttonlist = buttonlist;
         this.f = f;
         this.jbf = new JButtonFunction(f, agree_Img, disagree_Img);
-        this.agree_Image = agree_Img;
-        this.disagree_Image = disagree_Img;
     }
 
     public void actionPerformed(ActionEvent e) {

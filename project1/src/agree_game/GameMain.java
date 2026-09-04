@@ -1,5 +1,4 @@
 package src.agree_game;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
@@ -24,7 +23,12 @@ public class GameMain {
         closeButton.setContentAreaFilled(false);
         closeButton.setBorderPainted(false);
         closeButton.setBounds(660, 5, 35, 35);
-        closeButton.addActionListener(e -> System.exit(0));
+        closeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         f.add(closeButton);
         
         Font font = new Font("굴림", Font.PLAIN, 18);
@@ -40,7 +44,6 @@ public class GameMain {
         Timer timer = new Timer(time);
         timer.start();
         
-
         //여기부터
         Panel background = new Panel() {
             @Override

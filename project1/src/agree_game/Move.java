@@ -1,7 +1,4 @@
 package src.agree_game;
-import java.awt.*;
-import java.util.Random;
-
 import javax.swing.*;
 
 public class Move extends Thread {

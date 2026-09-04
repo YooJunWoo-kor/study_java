@@ -22,6 +22,7 @@ public class Timeout extends Frame {
                 super.paint(g);
             }
         };
+        
         background.setBounds(0, 0, 500, 300);
         background.setLayout(null);
         add(background);

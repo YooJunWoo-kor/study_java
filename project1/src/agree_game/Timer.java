@@ -1,12 +1,10 @@
 package src.agree_game;
 import java.awt.*;
-import java.sql.Time;
 
 public class Timer extends  Thread{
     static int second = 50;
     private Label time;
 
-    
     public Timer(Label time){
         this.time = time;
     }
